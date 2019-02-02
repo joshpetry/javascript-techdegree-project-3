@@ -17,22 +17,22 @@ $('#title').change( showOtherInput );
 
 
 // "T-Shirt Info" section
-
-
-function checkDesignInput() {
-
-  // Check design value
+// Change color options based on selected design
+function changeColorOptions() {
   if ( $('#design').val() === 'js puns' ) {
+    // Change default color value
     $('#color').val('cornflowerblue');
+    // Show/Hide color options
     $("#color option[value='cornflowerblue']").show();
     $("#color option[value='darkslategrey']").show();
     $("#color option[value='gold']").show();
     $("#color option[value='tomato']").hide();
     $("#color option[value='steelblue']").hide();
     $("#color option[value='dimgrey']").hide();
-
   } else if ( $('#design').val() === 'heart js' ) {
+    // Change default color value
     $('#color').val('tomato');
+    // Show/Hide color options
     $("#color option[value='cornflowerblue']").hide();
     $("#color option[value='darkslategrey']").hide();
     $("#color option[value='gold']").hide();
@@ -41,9 +41,8 @@ function checkDesignInput() {
     $("#color option[value='dimgrey']").show();
   };
 }
-
-
-$('#design').change( checkDesignInput );
+// When design input change, call function to change color options
+$('#design').change( changeColorOptions );
 
 
 /*
