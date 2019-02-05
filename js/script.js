@@ -48,3 +48,12 @@ function changeColorOptions() {
 }
 // When design input change, call function to change color options
 $('#design').change( changeColorOptions );
+
+
+
+// "Register for Activities" section
+// testing
+let checkbox = $(".activities input[name='js-libs']");
+let checkboxParent = checkbox.parent().text();
+console.log(checkbox);
+console.log(checkboxParent);
